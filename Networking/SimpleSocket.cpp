@@ -17,9 +17,7 @@ SimpleSocket::SimpleSocket(int domain, int service, int Protocol, int port, u_lo
     // Establishing Socket
     sock = socket(domain, service, Protocol);
     test_connection(sock);
-    // Establishing Network Connection
-    connection = Connect_to_network(sock, address);
-    test_connection(connection);
+    
 };
 
 // Test Connection Virtaul function
@@ -47,6 +45,12 @@ int SimpleSocket::get_sock()
 int SimpleSocket::get_connection()
 {
     return connection;
+}
+
+// setter function
+
+void SimpleSocket::set_connection(int con){
+    connection=con;
 }
 
 int main()

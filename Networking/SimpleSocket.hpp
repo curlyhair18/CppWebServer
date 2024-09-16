@@ -31,7 +31,7 @@ namespace hde
         // Parameter of SimpleSocket(DOMAIN i.e IPv4/IPv6,TYPE i.e UDP/TCP, PROTOCOL i.e in case of ip=0)
         SimpleSocket(int domain, int service, int Protocol, int port, u_long interface);
         // Virtual function to connect to a network
-        virtual int Connect_to_network(int sock, struct sockaddr_in address) = 0;
+        virtual int connect_to_network(int sock, struct sockaddr_in address) = 0;
         // functions to test socket and connection
         void test_connection(int);
         // Getter Function
@@ -39,8 +39,13 @@ namespace hde
         int get_sock();
         int get_connection();
 
-        // ~SimpleSocket();
+        // Setter Function
+        void set_connection(int con);
+
+        
     };
+
+
 
     // SimpleSocket::SimpleSocket(/* args */)
     // {
