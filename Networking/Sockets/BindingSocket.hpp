@@ -17,7 +17,7 @@ virtual function from SimpleSocket*/
 #include "SimpleSocket.hpp"
 namespace hde
 {
-    class BindingSocket : SimpleSocket
+    class BindingSocket : public SimpleSocket
     {
     public:
         // constructor

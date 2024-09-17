@@ -53,7 +53,3 @@ void SimpleSocket::set_connection(int con){
     connection=con;
 }
 
-int main()
-{
-    return 0;
-}
