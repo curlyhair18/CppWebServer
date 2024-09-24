@@ -20,6 +20,8 @@ namespace hde
         int backlog;
         int Listening;
     public:
+        int get_listening();
+        int get_backlog();
         ListeningSocket(int domain, int service, int protocol, int port, u_long interface, int bcklg);
         void start_listening();
     };

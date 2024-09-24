@@ -19,14 +19,26 @@ namespace hde
 {
     class BindingSocket : public SimpleSocket
     {
+
+    private:
+    //Member Variable
+    //The binding variable stores the value 0if successfull
+    int binding;
+
+    // Member function
+    //Virtaul function form parent to establish binding
+    int connect_to_network(int sock, struct sockaddr_in address);
+
     public:
         // constructor
+        //Parameterise constructor is required fot this class
         BindingSocket(int domain, int service, int Protocol, int port, u_long interface);
-        // overiding the virtual function(Virtual function from parents)
-        int connect_to_network(int sock, struct sockaddr_in address);
+        //getter
+        int get_binding();
+
     };
 
 }
 
 
-#endif
+#endif/* BindingSocket.hpp*/

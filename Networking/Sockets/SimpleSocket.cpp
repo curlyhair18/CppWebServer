@@ -40,16 +40,16 @@ struct sockaddr_in SimpleSocket::get_address()
 };
 int SimpleSocket::get_sock()
 {
-    return sock;
+    return this->sock;
 }
-int SimpleSocket::get_connection()
-{
-    return connection;
-}
+// int SimpleSocket::get_connection()
+// {
+//     return connection;
+// }
 
-// setter function
+// //setter function
 
-void SimpleSocket::set_connection(int con){
-    connection=con;
-}
+// void SimpleSocket:: set_connection(int con){
+//     connection=con;
+// }
 
